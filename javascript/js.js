@@ -4,16 +4,20 @@
 
 
 function agregarProyecto (){
-    const nombrep = document.getElementById("nombreproyecto").value
-    const descp = document.getElementById("descproyecto").value
+    const nombrep = document.getElementById("nombreproyectoF").value
+    const descp = document.getElementById("descproyectoF").value
+    //
     const newdiv = document.createElement("div")
     const proyecto = document.createTextNode(nombrep)
+    const proydescripcion = document.createTextNode(descp)
+    //
     proyecto.innerHTML = nombrep
     newdiv.setAttribute('class', 'nombreproyectos')
     newdiv.setAttribute('id', nombrep)
     newdiv.appendChild(proyecto)
-    document.getElementById("proyectolista").appendChild(newdiv)
-    console.log(proyecto)
+    newdiv.appendChild('<br>' + proydescripcion)
+    document.getElementById("proyectolistaF").appendChild(newdiv)
+    console.log(proyecto)//console para confirmar
     // descripcion
 
     // fecha vencimiento
@@ -26,7 +30,8 @@ function agregarTarea (){
     newdiv.setAttribute('class', 'nombretareas')
 
 }
-function validarNombre (string nombre){
+function validarNombre (nombre){
+ return true;
     
 }
 // ESTO PARA AGREGAR TAREA
