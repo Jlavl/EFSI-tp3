@@ -1,0 +1,25 @@
+html {
+    background-image: linear-gradient(rgb(255, 255, 255),rgb(255, 255, 255),rgb(253, 253, 214));
+}
+.titulo{
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    margin:20px;
+}
+input{
+    background-image: linear-gradient(rgb(255, 255, 255),rgb(253, 253, 237));
+    font-family: 'Courier New', Courier, monospace;
+}
+.proyectolista.test{
+    align-content: center;
+    color:red;
+    font-size: 60px;
+} 
+.nombreproyectos{
+    color:rgb(58, 57, 39);
+    font-size: 26px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding:10px;
+    margin: 5px;
+    flex-wrap: wrap;
+}
