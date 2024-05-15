@@ -1,4 +1,4 @@
-//crear objeto proyecto?
+
 // Tengo que crear arrays para proyectos y tareas, un array para los nombres
 //asi se puede comprobar que sean unicos, lo mismo para tareas
 
@@ -6,18 +6,30 @@
 function agregarProyecto (){
     const nombrep = document.getElementById("nombreproyectoF").value
     const descp = document.getElementById("descproyectoF").value
-    //
+    // \/ validacion \/
+    
+    if (validarNombreP(nombrep) == false){
+        alert("Debes crear un proyecto con un nombre unico.")
+    }
+    else{
+   //
     const newdiv = document.createElement("div")
-    const proyecto = document.createTextNode(nombrep)
+    const descdiv = document.createElement("div")
+    const nproyecto = document.createTextNode(nombrep)
     const proydescripcion = document.createTextNode(descp)
     //
-    proyecto.innerHTML = nombrep
+    nproyecto.innerHTML = nombrep
     newdiv.setAttribute('class', 'nombreproyectos')
     newdiv.setAttribute('id', nombrep)
-    newdiv.appendChild(proyecto)
-    newdiv.appendChild('<br>' + proydescripcion)
+    newdiv.appendChild(nproyecto)
+    descdiv.setAttribute('class', 'descproyectos')
+    descdiv.appendChild(proydescripcion)
+    newdiv.appendChild(descdiv)
+
     document.getElementById("proyectolistaF").appendChild(newdiv)
-    console.log(proyecto)//console para confirmar
+    console.log(nproyecto)//console para confirmar 
+    }
+
     // descripcion
 
     // fecha vencimiento
@@ -30,9 +42,22 @@ function agregarTarea (){
     newdiv.setAttribute('class', 'nombretareas')
 
 }
-function validarNombre (nombre){
- return true;
-    
+function validarNombreP (nombrep){
+    console.log(nombrep)
+    const nombresunicos = document.querySelectorAll("#proyectolistaF") // QueryselectorAll: Lo uso para devolver una lista de elementos "newdiv"
+
+    console.log(nombresunicos)
+    if (nombresunicos == null){
+        return true;
+    }
+    else{
+        for (let i=0; i < nombresunicos.length; i++){
+            if (nombrep = nombresunicos[i]){
+                return false;
+            }
+        }
+    }
+    return true;
 }
 // ESTO PARA AGREGAR TAREA
 /* const nombre = document.getElementById("nombreproyecto").value;
