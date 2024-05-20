@@ -6,7 +6,7 @@
 function agregarProyecto (){
     const nombrep = document.getElementById("nombreproyectoF").value
     const descp = document.getElementById("descproyectoF").value
-    // \/ validacion \/
+    //            \/ validacion \/
     
     if (validarNombreP(nombrep) == false){
         alert("Debes crear un proyecto con un nombre unico.")
@@ -44,15 +44,16 @@ function agregarTarea (){
 }
 function validarNombreP (nombrep){
     console.log(nombrep)
-    const nombresunicos = document.querySelectorAll("#proyectolistaF") // QueryselectorAll: Lo uso para devolver una lista de elementos "newdiv"
+    const nombresunicos = document.querySelectorAll("") // QueryselectorAll: Lo uso para devolver una lista de elementos "newdiv"
 
     console.log(nombresunicos)
+
     if (nombresunicos == null){
         return true;
     }
     else{
-        for (let i=0; i < nombresunicos.length; i++){
-            if (nombrep = nombresunicos[i]){
+        for (let i=0; i <= nombresunicos.length; i++){
+            if (nombrep == nombresunicos[i]){
                 return false;
             }
         }
@@ -65,5 +66,4 @@ const newproy = document.createElement("INPUT")
 newproy.setAttribute("type", "checkbox", size="30px")
 const proyecto = document.createTextNode(nombre)
 newproy.innerHTML = proyecto
-document.getElementById("proyectolista").appendChild(newproy)
-console.log("Funciona, pero no") */
+document.getElementById("proyectolista").appendChild(newproy)*/
