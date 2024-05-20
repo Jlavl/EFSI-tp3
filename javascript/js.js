@@ -8,11 +8,11 @@ function agregarProyecto (){
     const descp = document.getElementById("descproyectoF").value
     //            \/ validacion \/
     
-    if (validarNombreP(nombrep) == false){
+    /*if (validarNombreP(nombrep) == false){
         alert("Debes crear un proyecto con un nombre unico.")
     }
     else{
-   //
+   //*/
     const newdiv = document.createElement("div")
     const descdiv = document.createElement("div")
     const nproyecto = document.createTextNode(nombrep)
@@ -29,11 +29,8 @@ function agregarProyecto (){
     document.getElementById("proyectolistaF").appendChild(newdiv)
     console.log(nproyecto)//console para confirmar 
     }
-
-    // descripcion
-
     // fecha vencimiento
-} 
+//} 
 function agregarTarea (){
     const nombret = document.getElementById().value
     const newdiv = document.createElement("div")
@@ -44,20 +41,20 @@ function agregarTarea (){
 }
 function validarNombreP (nombrep){
     console.log(nombrep)
-    const nombresunicos = document.querySelectorAll("") // QueryselectorAll: Lo uso para devolver una lista de elementos "newdiv"
+    const nombreunicos = []
 
-    console.log(nombresunicos)
-
-    if (nombresunicos == null){
-        return true;
+    if (nombreunicos == null){
+        return false;
     }
     else{
         for (let i=0; i <= nombresunicos.length; i++){
             if (nombrep == nombresunicos[i]){
+
                 return false;
             }
         }
     }
+    nombreunicos.push(nombrep)
     return true;
 }
 // ESTO PARA AGREGAR TAREA

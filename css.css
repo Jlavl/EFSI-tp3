@@ -6,12 +6,14 @@ html {
     font-family: 'Courier New', Courier, monospace;
     margin:20px;
 }
+.Agregarproyectosytareas{
+
+}
 input{
     background-image: linear-gradient(rgb(255, 255, 255),rgb(253, 253, 237));
     font-family: 'Courier New', Courier, monospace;
 }
-input.text{
-}
+
 .proyectolistaF{
     align-content: center;
     color:red;
@@ -23,5 +25,13 @@ input.text{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding:10px;
     margin: 5px;
+    flex-wrap: wrap;
+}
+.descproyectos{
+    color:rgb(58, 57, 39);
+    font-size: 18px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding:5px;
+    margin: 2px;
     flex-wrap: wrap;
 }
