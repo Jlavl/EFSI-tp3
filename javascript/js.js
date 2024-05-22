@@ -32,9 +32,12 @@ function agregarProyecto (){
     // fecha vencimiento
 //} 
 function agregarTarea (){
-    const nombret = document.getElementById().value
+    const nombret = document.getElementById("nombreproyectoF").value
+    const desct = document.getElementById("descproyectoF").value
     const newdiv = document.createElement("div")
-    const proyecto = document.createTextNode(nombret)
+    const descdiv = document.createElement("div")
+    const ntarea = document.createTextNode(nombret)
+    const tdescripcion = document.createTextNode(desct)
     proyecto.innerHTML = nombret
     newdiv.setAttribute('class', 'nombretareas')
 
