@@ -7,21 +7,21 @@
 
         <div class="Agregarproyectosytareas">
             <p class="titulo"> AGREGAR NUEVO PROYECTO </p> <br>
-            <input type="text" class="nombreproyectoF" placeholder="Project Name*" required>
-            <input type="text" class="descproyectoF" placeholder="Project Description (Optional)" size="30">
+            <input type="text" id="nombreproyectoF" placeholder="Project Name*" required>
+            <input type="text" id="descproyectoF" placeholder="Project Description (Optional)" size="30">
             <input type= "datetime-local" class="vencproyectoF">
             <input type="button" onclick="agregarProyecto()" class="confirmar" value="Enviar"></br>
 
             <p class="titulo"> AGREGAR NUEVA TAREA </p> <br>
-            <input type="text" class="nombretareaF" placeholder="Task Name*">
-            <input type="text" class="desctareaF" placeholder="Task Description (Optional)" size="30">
+            <input type="text" id="nombretareaF" placeholder="Task Name*">
+            <input type="text" id="desctareaF" placeholder="Task Description (Optional)" size="30">
             <input type= "datetime-local" class="venctarea">
             <input type="button" onclick="agregarTarea()" id="confirmar" value="Enviar"></br>
         </div>
 
         <div id="resultado"></div>
         <ul id="proyectolistaF">
-            
+
 
         </ul>
     

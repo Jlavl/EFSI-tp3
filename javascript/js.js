@@ -4,6 +4,7 @@
 
 
 function agregarProyecto (){
+    console.log(document.getElementById("nombreproyectoF").value)
     const nombrep = document.getElementById("nombreproyectoF").value
     const descp = document.getElementById("descproyectoF").value
     //            \/ validacion \/
@@ -30,17 +31,21 @@ function agregarProyecto (){
     console.log(nproyecto)//console para confirmar 
     }
     // fecha vencimiento
-//} 
-function agregarTarea (){
-    const nombret = document.getElementById("nombreproyectoF").value
-    const desct = document.getElementById("descproyectoF").value
-    const newdiv = document.createElement("div")
-    const descdiv = document.createElement("div")
-    const ntarea = document.createTextNode(nombret)
-    const tdescripcion = document.createTextNode(desct)
-    proyecto.innerHTML = nombret
-    newdiv.setAttribute('class', 'nombretareas')
 
+function agregarTarea (){
+    const nombrep = document.getElementById("nombreproyectoF").value
+    const desct = document.getElementById("desctareaF").value
+    if (document.getElementById(nombrep) != null){
+        const descdiv = document.createElement("div")
+        const tdescripcion = document.createTextNode(desct)
+
+        descdiv.setAttribute('class', 'descproyectos')
+        descdiv.appendChild(tdescripcion)
+
+        document.getElementById(nombrep).appendChild(descdiv)
+    } else{
+
+    }
 }
 function validarNombreP (nombrep){
     console.log(nombrep)
