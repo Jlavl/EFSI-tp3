@@ -1,19 +1,22 @@
-
-// Tengo que crear arrays para proyectos y tareas, un array para los nombres
-//asi se puede comprobar que sean unicos, lo mismo para tareas
-
-
+//Espacio en blanco para que se vea mas bonito
+//  \    /\    /\    /\    /\    /\    /\    /\    /\    /\   
+//   \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  
+//    \/    \/    \/    \/    \/    \/    \/    \/    \/    \ 
+// -----------------------------------------------------------
 function agregarProyecto (){
+
+    if (document.getElementById("nombreproyectoF").value == null || document.getElementById("nombreproyectoF").value == " "){
+        alert("Debes nombrar tu proyecto.")
+    } else {
     console.log(document.getElementById("nombreproyectoF").value)
     const nombrep = document.getElementById("nombreproyectoF").value
     const descp = document.getElementById("descproyectoF").value
-    //            \/ validacion \/
-    
+//              \/ validacion \/
     /*if (validarNombreP(nombrep) == false){
         alert("Debes crear un proyecto con un nombre unico.")
     }
     else{
-   //*/
+*/
     const newdiv = document.createElement("div")
     const descdiv = document.createElement("div")
     const nproyecto = document.createTextNode(nombrep)
@@ -29,22 +32,31 @@ function agregarProyecto (){
 
     document.getElementById("proyectolistaF").appendChild(newdiv)
     console.log(nproyecto)//console para confirmar 
-    }
     // fecha vencimiento
-
+    }
+    
+}
 function agregarTarea (){
-    const nombrep = document.getElementById("nombreproyectoF").value
+    const nombrepadre = document.getElementById("proyectoPadre").value
+    const nombret = document.getElementById("nombretareaF").value
     const desct = document.getElementById("desctareaF").value
-    if (document.getElementById(nombrep) != null){
-        const descdiv = document.createElement("div")
+    if (document.getElementById(nombrepadre) != null){
+
+        const desctdiv = document.createElement("div")
+        const nombretdiv = document.createElement("div")
+        const tnombret = document.createTextNode(nombret)
         const tdescripcion = document.createTextNode(desct)
 
-        descdiv.setAttribute('class', 'descproyectos')
-        descdiv.appendChild(tdescripcion)
+        desctdiv.setAttribute('class', 'desctareas')      //    ||       
+        desctdiv.appendChild(tdescripcion)                //   _||_     
+        nombretdiv.setAttribute('class', 'nombretareas')  //   \  /   
+        nombretdiv.setAttribute('id', nombret)            //    \/
+        nombretdiv.appendChild(tnombret)                   //se pone los atributos de css a descripcion y nombre
+        nombretdiv.appendChild(desctdiv)
 
-        document.getElementById(nombrep).appendChild(descdiv)
+        document.getElementById(nombrepadre).appendChild(nombretdiv)//tarea se agrega al proyecto
     } else{
-
+        alert("Debes ingresar el nombre de un proyecto al cual ingresar esta tarea.")
     }
 }
 function validarNombreP (nombrep){

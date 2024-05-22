@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html>
     <head>
         <link rel="stylesheet" href="css.css">
     </head>
@@ -7,15 +7,16 @@
 
         <div class="Agregarproyectosytareas">
             <p class="titulo"> AGREGAR NUEVO PROYECTO </p> <br>
-            <input type="text" id="nombreproyectoF" placeholder="Project Name*" required>
+            <input type="text" id="nombreproyectoF" placeholder="Project Name*" required size="30">
             <input type="text" id="descproyectoF" placeholder="Project Description (Optional)" size="30">
-            <input type= "datetime-local" class="vencproyectoF">
+            <input type= "datetime-local" class="vencproyectoF" size="30">
             <input type="button" onclick="agregarProyecto()" class="confirmar" value="Enviar"></br>
 
             <p class="titulo"> AGREGAR NUEVA TAREA </p> <br>
-            <input type="text" id="nombretareaF" placeholder="Task Name*">
+            <input type="text" id="proyectoPadre" placeholder="Project to add task to*" size="30">
+            <input type="text" id="nombretareaF" placeholder="Task Name*" size="30">
             <input type="text" id="desctareaF" placeholder="Task Description (Optional)" size="30">
-            <input type= "datetime-local" class="venctarea">
+            <input type= "datetime-local" class="venctarea" size="30">
             <input type="button" onclick="agregarTarea()" id="confirmar" value="Enviar"></br>
         </div>
 

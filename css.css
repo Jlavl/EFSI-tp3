@@ -7,7 +7,15 @@ html {
     margin:20px;
 }
 .Agregarproyectosytareas{
-    
+    background-image:-webkit-linear-gradient(90deg,rgb(255, 255, 255),rgb(253, 253, 214));
+    margin: 5%;
+    padding:20px;
+    min-width: 343px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
 }
 input{
     background-image: linear-gradient(rgb(255, 255, 255),rgb(253, 253, 237));
@@ -16,16 +24,24 @@ input{
 
 .proyectolistaF{
     align-content: center;
-    color:red;
     font-size: 60px;
+    width: 100%;
 }
 .nombreproyectos{
     color:rgb(58, 57, 39);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    min-width: 50%;
+    max-width: 100%;
     font-size: 26px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Arial, Helvetica, sans-serif, Geneva, Tahoma, sans-serif;
     padding:10px;
     margin: 5px;
-    flex-wrap: wrap;
 }
 .descproyectos{
     color:rgb(58, 57, 39);
@@ -33,5 +49,19 @@ input{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding:5px;
     margin: 2px;
+    flex-wrap: wrap;
+}
+.nombretareas{
+    color:rgb(14, 13, 7);
+    border: 2px;
+    border-color: black;
+    font-size: 16px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    flex-wrap: wrap;
+}
+.desctareas{
+    color:rgb(58, 57, 39);
+    font-size: 13px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     flex-wrap: wrap;
 }
