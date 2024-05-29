@@ -27,6 +27,7 @@ input{
     font-size: 60px;
     width: 100%;
 }
+/*---------------------PROYECTOS CLASES----------------------*/
 .nombreproyectos{
     color:rgb(58, 57, 39);
     display: flex;
@@ -58,6 +59,9 @@ input{
     font-size: 16px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     flex-wrap: wrap;
+}
+.tcomplete{
+    border-color: beige;
 }
 .desctareas{
     color:rgb(58, 57, 39);
