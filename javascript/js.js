@@ -46,12 +46,16 @@ function agregarTarea (){
         const nombretdiv = document.createElement("div")
         const tnombret = document.createTextNode(nombret)
         const tdescripcion = document.createTextNode(desct)
+        const checkbox = document.createElement("input")
 
         desctdiv.setAttribute('class', 'desctareas')      //    ||       
         desctdiv.appendChild(tdescripcion)                //   _||_     
         nombretdiv.setAttribute('class', 'nombretareas')  //   \  /   
         nombretdiv.setAttribute('id', nombret)            //    \/
-        nombretdiv.appendChild(tnombret)                   //se pone los atributos de css a descripcion y nombre
+        checkbox.setAttribute('type','checkbox')
+        checkbox.setAttribute('class','tcomplete')
+        nombretdiv.appendChild(tnombret)                  //se pone los atributos de css a descripcion y nombre
+        nombretdiv.appendChild(checkbox)
         nombretdiv.appendChild(desctdiv)
 
         document.getElementById(nombrepadre).appendChild(nombretdiv)//tarea se agrega al proyecto
@@ -59,6 +63,7 @@ function agregarTarea (){
         alert("Debes ingresar el nombre de un proyecto al cual ingresar esta tarea.")
     }
 }
+
 function validarNombreP (nombrep){
     console.log(nombrep)
     const nombreunicos = []
