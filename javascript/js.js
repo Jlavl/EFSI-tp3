@@ -54,6 +54,11 @@ function agregarTarea (){
         nombretdiv.setAttribute('id', nombret)            //    \/
         checkbox.setAttribute('type','checkbox')
         checkbox.setAttribute('class','tcomplete')
+        checkbox.setAttribute('checked')
+        checkbox.addEventListener("click", function(){ // Usar event listeners para detectar el click de el checkbox y cambiar descripcion y nombre de tarea a gris y viceversa
+
+        })
+
         nombretdiv.appendChild(tnombret)                  //se pone los atributos de css a descripcion y nombre
         nombretdiv.appendChild(checkbox)
         nombretdiv.appendChild(desctdiv)
