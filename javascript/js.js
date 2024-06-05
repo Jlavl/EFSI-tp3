@@ -44,23 +44,22 @@ function agregarTarea (){
 
         const desctdiv = document.createElement("div")
         const nombretdiv = document.createElement("div")
-        const tnombret = document.createTextNode(nombret)
+        const tnombret = document.createTextNode(nombret,'</br>')
         const tdescripcion = document.createTextNode(desct)
-        const checkbox = document.createElement("input")
+        const boton = document.createElement("input")
 
         desctdiv.setAttribute('class', 'desctareas')      //    ||       
         desctdiv.appendChild(tdescripcion)                //   _||_     
         nombretdiv.setAttribute('class', 'nombretareas')  //   \  /   
         nombretdiv.setAttribute('id', nombret)            //    \/
-        checkbox.setAttribute('type','checkbox')
-        checkbox.setAttribute('class','tcomplete')
-        checkbox.setAttribute('checked')
-        checkbox.addEventListener("click", function(){ // Usar event listeners para detectar el click de el checkbox y cambiar descripcion y nombre de tarea a gris y viceversa
-
+        boton.setAttribute('type','button')
+        boton.setAttribute('class','tcomplete')
+        boton.addEventListener("click", function(nombret,nombrepadre){ // Usar event listeners para detectar el click de el checkbox y cambiar descripcion y nombre de tarea a gris y viceversa
+            nombretdiv.style.textDecoration = "line-through" 
+            nombretdiv.style.color = "rgb(208 217 155)"
         })
-
         nombretdiv.appendChild(tnombret)                  //se pone los atributos de css a descripcion y nombre
-        nombretdiv.appendChild(checkbox)
+        nombretdiv.appendChild(boton)
         nombretdiv.appendChild(desctdiv)
 
         document.getElementById(nombrepadre).appendChild(nombretdiv)//tarea se agrega al proyecto

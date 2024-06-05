@@ -37,6 +37,7 @@ input{
     align-items: center;
     justify-content: flex-end;
 
+
     min-width: 50%;
     max-width: 100%;
     font-size: 26px;
@@ -61,7 +62,11 @@ input{
     flex-wrap: wrap;
 }
 .tcomplete{
-    border-color: beige;
+    border-color: #232322;
+    width: 20px;
+    height: 20px;
+    border-width: 2px;
+
 }
 .desctareas{
     color:rgb(58, 57, 39);
